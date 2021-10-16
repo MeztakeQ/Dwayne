@@ -1,0 +1,349 @@
+@import "global";
+
+
+.page__top {
+    background-color: #FAFF00;
+    display: flex;
+    justify-content: space-around;
+    height: 140px;
+    align-items: center;
+}
+
+.page__logo-img{
+    width: 110px;
+}
+
+// меню
+.page__list {
+    display: flex;
+}
+
+.page__list-link {
+    margin-left: 30px;
+    background-color: #1A1A1A;
+    padding: 5px 18px;
+    border-radius: 20px;
+    color: #FFF100;
+    transition: all .5s;
+    &:hover{
+       background-color: transparent;
+       color: #1A1A1A;
+    }
+}
+
+//
+
+
+.page__content-first {
+    padding-top: 150px;
+
+}
+.page__content-title {
+    font-family: Vampiro One;
+    font-size: 96px;
+    line-height: 120px;
+    color: #FFF100;
+    margin-bottom: 10px;
+}
+.page__content-downtitle {
+    font-family: Comfortaa;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.5em;
+    color: #EBDF13;
+
+}
+
+
+
+.page__content-second{
+    text-align: left;
+    padding-top: 50px;  
+}
+
+.second-page{
+    overflow: hidden;
+    position: relative;
+}
+
+
+// блок с карточками
+
+.page__cards{
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.card{
+    cursor: pointer;
+    width: 280px;
+    height: 350px;
+    position: relative;
+
+    &:nth-child(even){
+        margin-top: 100px;
+
+    }    
+}
+
+.card__front,
+.card__back{
+   width: 100%;
+   height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+    border: 2px solid #D6CC22;
+    
+}
+
+.card__front img{
+   height: 100%;
+}
+
+.card__front{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.card__back{
+    transform: perspective(600px) rotateY(180deg);
+    background-color: #2C2D29;
+    text-align: center;
+    padding: 5px;
+    color: #ffff;
+
+}
+
+.card__content-text{
+    font-size: 15px;
+}
+
+
+.card:hover > .card__front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .card__back{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+// 
+
+
+
+.page__wrap{
+    display: flex;
+    justify-content: space-around;
+}
+
+.page__left{
+    width: 500px;
+}
+
+// видео
+.page__vid-video{
+    z-index: 4;
+    flex-grow: 1;
+    border: 1px solid #D6CC22; 
+}
+
+.page__vid{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: -150px;
+    align-items: flex-start;
+}
+//
+
+.page__left-text{
+    color: #fff;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+// блок works карточки
+.page__items{
+    display: flex;
+    z-index: 5;
+    position: absolute;
+    top: 60%;
+    left: 9%;
+  
+}
+
+
+.page__item-img{
+    width: 300px;
+}
+
+.page__item {
+    height: 160px;
+    border: 1px solid #D6CC22;
+        transition: .5s;
+        &:hover{
+            transform: scale(1.1);
+        }  
+}
+.page__item-one {
+    z-index: 1;
+    position: relative;
+   
+  
+    &:before{
+        content: url(../images/works/decor-1.png);
+        position: absolute;
+        top: -150px;
+        z-index: -1;
+    }
+    
+    
+}
+
+.page__item-two {
+    z-index: 2;
+    margin-left: -30px;
+    margin-top: 50px;
+    position: relative;
+    &:before{
+        content: url(../images/works/decor-2.png);
+        position: absolute;
+        top: -190px;
+        z-index: -1;     
+    }
+}
+
+.page__item-three {
+    z-index: 1;
+    position: relative;
+     margin-left: -30px;
+    &:before{
+        content: url(../images/works/decor-3.png);
+        position: absolute;
+        top: -190px;
+        z-index: -1;
+       
+    }
+  
+}
+
+.page__item-four {
+    z-index: 2;
+    
+      margin-top: 50px;
+      position: relative;
+       margin-left: -30px;
+    &:before{
+        content: url(../images/works/decor-4.png);
+        position: absolute;
+        top: -230px;
+        z-index: -1;
+       
+    }
+}
+
+//
+
+// странца бренда
+.page__content-five{
+    padding-top: 100px;
+}
+
+.page__brands {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+}
+.page__brand {
+        position: relative;
+        transition: .5s;
+        &:hover{
+            transform: scale(0.9);
+        }
+    &:nth-child(odd){
+        margin-top: 80px;
+    }
+}
+.page__brand-img{
+    width: 250px;
+}
+
+.page__brand-rock {
+    &::before{
+        content: url("../images/brands/decor-1.png");
+        position: absolute;
+        left: -70px;
+        top: -60px;
+    }
+ 
+}
+.page__brand-teremana {
+    &::before{
+        content: url("../images/brands/decor-2.png");
+        position: absolute;
+          right: -70px;
+        bottom: 0px;
+    }
+
+}
+.page__brand-zoa {
+    &::before{
+        content: url("../images/brands/decor-3.png");
+        position: absolute;
+         right: -70px;
+        top: -60px;
+    }
+}
+
+//
+
+
+// страница контакта
+.last-title{
+   
+    letter-spacing: 0em;
+   
+}
+
+
+.page__messengers {
+     position: relative;
+    z-index: 2;
+    left: 10%;
+    top: 120px;
+    display: block;
+ 
+}
+.page__messenger {
+      display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;;
+   justify-content: start;
+   text-align: left;
+    position: relative;
+    &::before{
+        content: '';
+        width: 1px;
+        height: 100px;
+        background-color: #D6CC22;
+        position: absolute;
+        top: -120px;
+        left: 30px;
+    }
+     &::after{
+        content: '';
+        width: 1px;
+        height: 100px;
+        background-color: #D6CC22;
+        position: absolute;
+        bottom: -120px;
+        left: 30px;
+    }
+  
+}
+
+//

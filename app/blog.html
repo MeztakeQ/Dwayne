@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwayne Johnson</title>
+     <link type="image/x-icon" rel="shortcut icon" href="images/page-first/logo.png">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Titan+One&family=Vampiro+One&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+</head>
+
+<body>
+
+
+    <section class="page second-page">
+        <div class="container">
+            <div class="page__top">
+                <a class="page__logo" href="#">
+                    <img class="page__logo-img" src="images/page-first/logo.png" alt="Логотип">
+                </a>
+
+                <menu class="page__menu">
+                    <nav class="page__nav">
+                        <ul class="page__list">
+                            <li class="page__list-item"><a class="page__list-link transition" href="index.html">home</a></li>
+                            <li class="page__list-item"><a class="page__list-link transition" href="about.html">about</a></li>
+                            <li class="page__list-item"><a class="page__list-link transition" href="blog.html">blog</a></li>
+                            <li class="page__list-item"><a class="page__list-link transition" href="works.html">works</a></li>
+                            <li class="page__list-item"><a class="page__list-link transition" href="brands.html">brands</a></li>
+                            <li class="page__list-item"><a class="page__list-link transition" href="contact.html">contact</a></li>
+                        </ul>
+                    </nav>
+                </menu>
+            </div>
+
+            <div class="page__content page__content-second">
+                <span class="page__content-bgtitle">
+                    Blog
+                </span>
+
+                <div class="page__wrap">
+                    <div class="page__left">
+                        <p class="page__left-text wow animate__animated animate__backInLeft" data-wow-duration="1s"
+                            data-wow-delay=".5s">
+                            “I am working on my second book, I like to read books on acting and directing and
+                            biographies of the most famous actors. I like to meet my football and wrestling colleagues.
+                            I believe that life is terribly short and you can't let a single second go to waste.”
+                        </p>
+                        <p class="page__left-text wow animate__animated animate__backInLeft" data-wow-duration="2s"
+                            data-wow-delay=".5s">
+                            “Coaches from all over the world are asking for me, and it flatters me very much. But my
+                            answer to them is always the
+                            same: if the day comes when I can't drive myself harder than you can drive me, then on that
+                            very day I will stop
+                            training.”
+                        </p>
+                        <p class="page__left-text wow animate__animated animate__backInLeft" data-wow-duration="3s"
+                            data-wow-delay=".5s">
+                            “I, as if by magic, through reincarnation during my sports career, came to such an inner
+                            state in which I could be
+                            anyone without being afraid to seem weak, ridiculous, ridiculous, stupid.”
+                        </p>
+                        <p class="page__left-text wow animate__animated animate__backInLeft" data-wow-duration="5s"
+                            data-wow-delay=".5s">
+                            “Throughout life we change and try to change for the better, we are looking for, maybe,
+                            insight, maybe inspiration, or
+                            just trying to understand ourselves. For me, all this is the magic of life.”
+                        </p>
+
+                    </div>
+                    <div class="page__right">
+                        <div class="page__vid">
+                            <video class="page__vid-video wow animate__animated animate__zoomIn"
+                                data-wow-duration="5s" data-wow-delay=".5s"" autoplay width=" 500">
+                                <source src="images/video.mp4" type="video/mp4">    
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/main.min.js"></script>
+    <script src="js/wow.min.js"></script>
+     <script src="js/custom.js"></script>
+     <script src="js/jquery-1.4.1.min.js"></script>
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $("body").css("display", "none");
+
+             $("body").fadeIn(100);
+
+             $("a.transition").click(function (event) {
+                 event.preventDefault();
+                 linkLocation = this.href;
+                 $("body").fadeOut(100, redirectPage);
+             });
+
+             function redirectPage() {
+                 window.location = linkLocation;
+             }
+         });
+     </script>
+</body>
+
+</html>

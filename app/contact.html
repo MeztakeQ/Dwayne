@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwayne Johnson</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/page-first/logo.png">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Titan+One&family=Vampiro+One&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <section class="page second-page">
+        <div class="container">
+            <div class="page__top">
+                <a class="page__logo" href="#">
+                    <img class="page__logo-img" src="images/page-first/logo.png" alt="Логотип">
+                </a>
+
+                <menu class="page__menu">
+                    <nav class="page__nav">
+                        <ul class="page__list">
+                            <li class="page__list-item"><a class="page__list-link transition" href="index.html">home</a></li>
+                            <li class="page__list-item"><a class="page__list-link transition" href="about.html">about</a></li>
+                            <li class="page__list-item"><a class="page__list-link transition" href="blog.html">blog</a></li>
+                            <li class="page__list-item"><a class="page__list-link transition" href="works.html">works</a></li>
+                            <li class="page__list-item"><a class="page__list-link transition" href="brands.html">brands</a></li>
+                            <li class="page__list-item"><a class="page__list-link transition" href="contact.html">contact</a></li>
+                        </ul>
+                    </nav>
+                </menu>
+            </div>
+
+            <div class="page__content page__content-six">
+                <span class="page__content-bgtitle last-title">
+                    Contact
+                </span>
+
+                <div class="page__messengers">
+                    <div class="page__messenger">
+                        <a class="page__messenger-link" href="https://www.instagram.com/therock/" target="_blank">
+                            <img src="images/contact/img-1.png" alt="">
+                        </a>
+                        <a class="page__messenger-link" href="https://ru-ru.facebook.com/DwayneJohnson" target="_blank">
+                            <img src="images/contact/img-2.png" alt="">
+                        </a>
+                        <a class="page__messenger-link" href="https://twitter.com/therock" target="_blank">
+                            <img src="images/contact/img-3.png" alt="">
+                        </a>
+                        <a class="page__messenger-link" href="https://www.youtube.com/channel/UCBdw4dLCLLHmTgAOnW4V0hQ"
+                            target="_blank">
+                            <img src="images/contact/img-4.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("body").css("display", "none");
+
+            $("body").fadeIn(100);
+
+            $("a.transition").click(function (event) {
+                event.preventDefault();
+                linkLocation = this.href;
+                $("body").fadeOut(100, redirectPage);
+            });
+
+            function redirectPage() {
+                window.location = linkLocation;
+            }
+        });
+    </script>
+</body>
+
+</html>
